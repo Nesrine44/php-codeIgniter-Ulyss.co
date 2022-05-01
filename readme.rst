@@ -2,13 +2,25 @@
 What is CodeIgniter
 ###################
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
+"AVANT DE POSTULER A UN JOB, QUE DIRIEZ-VOUS D'ECHANGER AVEC VOS FUTURS COLLEGUES?"​
+
+C'est en échangeant avec de nombreux demandeurs d'emploi que nous avons fait le constat que la meilleure façon de faire le bon choix d'entreprise et de préparer un entretien d'embauche était de discuter directement avec un salarié qui occupe ou qui a occupé le poste visé. 
+
+Nous avons créé la plateforme web ULYSS.CO pour répondre à ce besoin et aider les candidats à faire le bon choix de carrière.
+
+L'intérêt pour le CANDIDAT 
+- FAIRE LE BON CHOIX D'ENTREPRISE: Avoir des informations sur l'environnement et l'ambiance de travail, la compatibilité avec son savoir-être/ savoir-faire, l'équilibre vie professionnelle/Vie personnelle...
+- PREPARER SON ENTRETIEN : connaître les qualités requises pour le poste, les atouts à mettre en avant, les perspectives d'évolution...
+
+L'intérêt pour le MENTOR 
+- PARTAGER SON EXPERIENCE : Parler de son vécu dans l'entreprise, de sa perception du poste et de sa mission
+- AIDER LES CANDIDATS: En répondant aux interrogations des candidats, le mentor aide les candidats à affiner leur choix
+- PARTICIPER AU RECRUTEMENT ET A L'ATTRACTIVITE DE LEUR ENTREPRISE 
+
+L'intérêt pour l'ENTREPRISE : 
+- MIEUX RECRUTER : Un employé recruté qui a déjà pu échanger avec ses futurs collègues de travail est un employé qui a sélectionné l'entreprise et le poste en toute connaissance de cause. Il a fait le bon choix... L'entreprise aussi !
+- DEVELOPPER L'EMPLOYEE ADVOCACY / LA MARQUE EMPLOYEUR : Il a été établi que les salariés, en tant qu'ambassadeurs de leur entreprise, inspiraient davantage confiance au grand public que les communications officielles. L'étude 2016 d'Edelman Trust Barometer place ainsi les employés comme étant plus crédibles que le CEO auprès du grand public.
+https://www.ulyss.co
 
 *******************
 Release Information
