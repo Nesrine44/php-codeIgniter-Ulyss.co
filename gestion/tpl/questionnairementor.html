@@ -1,0 +1,70 @@
+<div class="bg-light lter b-b wrapper-md">
+	<h1 class="m-n font-thin h3">Questionnaire</h1>
+</div>
+
+<div class="wrapper-md" ng-controller="QuestionnaireMentorController">
+	<div class="panel panel-default">
+		<div class="table-responsive">
+			<table ui-jq="dataTable" ui-options="{
+													  sAjaxSource: '{{app.linkapi}}gestion/questionnairementor',
+													  oLanguage: { sProcessing:   'Traitement en cours...',
+															   sLengthMenu:   'Afficher _MENU_ éléments',
+															   sZeroRecords:  'Aucun élément à afficher',
+															   sInfo: 'Affichage de l\'élement _START_ à _END_ sur _TOTAL_ éléments',
+															   sInfoEmpty: 'Affichage de l\'élement 0 à 0 sur 0 éléments',
+															   sInfoFiltered: '(filtré de _MAX_ éléments au total)',
+															   sInfoPostFix:  '',
+															   sSearch:       'Rechercher:',
+															   sUrl:          '',
+															   oPaginate: {
+																  sFirst:    'Premier',
+																  sPrevious: 'Précédent',
+																  sNext:     'Suivant',
+																  sLast:     'Dernier'
+																   }
+															  },
+													  aoColumns: [
+														{ mData: 'date_creation' },
+														
+														{ mData: 'candidat_secteur_activite' },
+														{ mData: 'candidat_est_mentor' },
+														
+														{ mData: 'nom_mentor' },
+														{ mData: 'prenom_mentor' },
+														
+														{ mData: 'issetrdv' },
+														{ mData: 'experience_globale' },
+														{ mData: 'experience_globale_non' },
+														{ mData: 'recommandation_ulyss' },
+														{ mData: 'recommandation_ulyss_non' }
+													  ],
+													}"
+			class="table table-striped m-b-none">
+				<thead>
+					<tr>
+						<th>Date</th>
+						
+						<th>Candidat - Secteur activité</th>
+						<th>Candidat - Est mentor</th>
+						
+						<th>Nom mentor</th>
+						<th>Prénom mentor</th>
+						
+						<!--QUestion 1-->
+						<th>Rendez-vous présent ?</th>
+						
+						<!--QUestion 2-->
+						<th>Expérience globale ?</th>
+						<th>Pourquoi ?</th>
+						
+						<!--QUestion 3-->
+						<th>Recommanderiez vous Ulyss.co</th>
+						<th>Pourquoi ?</th>
+					
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+#jobsModal .modal-dialog {
+    width: 1100px;
+    height: fit-content;
+    font-family: 'Lato';
+
+}
+
+#jobsModal .modal-content {
+    padding: 20px;
+    background-color: #00b3ee;
+    background: repeating-linear-gradient(45deg, #FFF, #fff 280px, #00b3eed6 0px, #00b3ee 900px);
+    /*repeating-linear-gradient(45deg, #FFF, #fff 9px, #00b3eed1 0px, #00b3ee 55px)*/
+}
+
+.section-job1 {
+    background-color: #ffffffed;
+    padding: 50px;
+}
+
+.section-job1 h1 {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 50px;
+    font-family: 'Lato';
+}
+
+.section-job1 > .row, .section-job1 form > .row {
+    margin-bottom: 50px;
+}
+
+.section-job1 .row .header_job {
+    height: fit-content !important;
+    margin: auto 0;
+    background: none;
+}
+
+.logo_ent_job {
+    height: 100px !important;
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.21);
+}
+
+.section-job1 .row select, .section-job1 .row input:not(.btn_modif) {
+    border: 1px solid #00b3ee61;
+    border-radius: 20px;
+    line-height: 40px;
+    background: none;
+    padding: 0 20px;
+    margin: 0;
+}
+
+.header_job .btn_srch {
+    width: 145px;
+}
+
+.header_job .btn_srch a {
+    color: #FFFFFF;
+}
+
+.mission textarea {
+    height: 320px;
+    width: 100%;
+    background: none;
+    border: 1px solid #00b3ee;
+    resize: none;
+    margin-bottom: 30px;
+}
+
+.descrip {
+    margin-top: 50px;
+}
+
+.padl-0 .row {
+    margin: auto 0;
+}
+
+.publier_btn {
+    width: 100px;
+    margin: auto;
+}
+
+.publier_btn a {
+    color: #FFFFFF;
+}
+
+.current_offers {
+    display: flex;
+}
+
+.current_offers .col-md-2, .current_offers .col-md-1 {
+    margin: auto;
+    width: fit-content;
+}
+
+.current_offers img:not(:first-child) {
+    margin-left: 20px;
+}
+
+.current_offers p {
+    color: #000000;
+}
+
+.single_offer {
+    height: 150px;
+    border: 1px solid #00b3ee61;
+    padding-top: 15px;
+}
+
+.single_offer h3 {
+    margin: 20px 0;
+}
+
+.btn_modif {
+    padding: 8px 25px 8px 25px;
+    border: 1px solid #fff;
+    border-radius: 100px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #5cb85c;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    cursor: pointer;
+}
+
+/**** option Publier ****/
+.toggle {
+    min-width: 120px !important;
+}
+
+.toggle-group label {
+    font-size: 14px;
+}
+
+/****************** Checkbox ***********************************/
+.row.mentors {
+    margin: auto;
+    height: 155px;
+}
+
+.label_mentor {
+    display: flex;
+    color: #0099d5;
+}
+
+.checkmark {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    height: 25px;
+    width: 25px;
+    background-color: #d6d6d6;
+    border-radius: 50px;
+}
+
+.mentors input {
+    display: none;
+}
+
+.mentors input[type=checkbox]:checked ~ .checkmark {
+    background-color: #86ec8d;
+}

@@ -1,0 +1,192 @@
+<div class="bg-light lter b-b wrapper-md">
+
+
+
+  <h1 class="m-n font-thin h3">Gestion des coup de coeur</h1>
+
+
+
+</div>
+
+
+
+<div class="wrapper-md" ng-controller="AnnoncesController" >
+
+
+
+  <div class="panel panel-default">
+
+
+
+
+
+    <div class="table-responsive">
+
+
+
+      <table ui-jq="dataTable" ui-options="{
+
+
+
+          sAjaxSource: '{{app.linkapi}}gestion/coup_de_coeur',
+
+          oLanguage: { sProcessing:   'Traitement en cours...',
+
+
+
+                   sLengthMenu:   'Afficher _MENU_ éléments',
+
+
+
+                   sZeroRecords:  'Aucun élément à afficher',
+
+
+
+                   sInfo: 'Affichage de l\'élement _START_ à _END_ sur _TOTAL_ éléments',
+
+    
+
+                   sInfoEmpty: 'Affichage de l\'élement 0 à 0 sur 0 éléments',
+
+    
+
+                   sInfoFiltered: '(filtré de _MAX_ éléments au total)',
+
+    
+
+                   sInfoPostFix:  '',
+
+    
+
+                   sSearch:       'Rechercher:',
+
+    
+
+                   sUrl:          '',
+
+    
+
+                   oPaginate: {
+
+    
+
+                      sFirst:    'Premier',
+
+      
+
+                      sPrevious: 'Précédent',
+
+      
+
+                      sNext:     'Suivant',
+
+                      sLast:     'Dernier'
+
+                       }
+
+
+
+                  },
+
+
+
+          aoColumns: [
+
+
+            { mData: 'id' },
+            { mData: 'titre' },
+            { mData: 'image_coup' },
+
+            { mData: 'supp' }
+
+
+
+          ],
+
+
+
+
+        }" class="table table-striped m-b-none">
+
+
+
+        <thead>
+
+
+
+          <tr>
+
+
+            <th  style="width:25%">ID</th> 
+            <th  style="width:25%">Titre</th> 
+            <th  style="width:25%">Image coup</th> 
+ 
+            <th  style="width:25%">Statut</th> 
+            
+              <th>Actions</th>
+
+
+
+          </tr>
+
+
+
+        </thead>
+
+
+
+        <tbody>
+
+
+
+        </tbody>
+
+
+
+      </table>
+
+
+
+    </div>
+
+
+
+  </div>
+
+
+
+       
+
+        <script type="text/ng-template" id="myModalContentConfirmation.html">
+
+
+
+            <div ng-include="'tpl/modal/modal-confirmation.html'"></div>
+
+
+
+          </script>
+
+
+
+
+
+
+
+           <script type="text/ng-template" id="myModalContent.html">
+
+
+
+            <div ng-include="'tpl/modal/add_edit_users.html'"></div>
+
+
+
+          </script>
+
+
+
+
+
+
+
+</div>

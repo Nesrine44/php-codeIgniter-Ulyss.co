@@ -1,0 +1,77 @@
+<div ng-controller="CtrlAddEditParlent">
+
+
+
+<div class="modal-header">
+
+
+
+    <h3 class="modal-title">Gestion des parlents</h3>
+
+
+
+</div>
+
+
+
+<div class="modal-body">
+
+
+
+      <form  name="form" class="form-validation" novalidate>
+
+
+        <div class="form-group">
+          <label>Titre</label>        
+          <input type="text" class="form-control" ng-model="temoin.titre" placeholder="Titre" required>
+        </div>
+
+
+        <div class="form-group">
+          <label>Link</label>        
+          <input type="text" class="form-control" ng-model="temoin.link" placeholder="Link" required>
+        </div>
+ <div class="form-group">
+          <label>Photo </label>
+         <input ui-jq="filestyle" file-model="myFile" type="file" required data-icon="false" data-classButton="btn btn-default" data-classInput=" inline v-middle input-s">
+  </div>
+ <div class="form-group">
+          <label>Page </label>
+            <select ng-model="temoin.type" class="form-control">
+             <option value="monter_en_competence">Monter en competence</option>
+             <option value="reussir_mon_entretien">Reussir mon entretien</option>
+           </select>
+  </div>
+
+
+
+
+      </form>
+
+
+
+    </div>
+
+
+
+<div class="modal-footer">                  
+
+
+
+    <button class="btn btn-default" ng-click="cancel()">Annuler</button>
+
+
+
+    <button class="btn btn-primary" type="submit" ng-click="ok()" ng-disabled="form.$invalid">Enregistrer</button>
+
+
+
+</div>
+
+
+
+</div>
+
+<style type="text/css">
+  .clserror{border-color: #f05050 !important;}
+</style>

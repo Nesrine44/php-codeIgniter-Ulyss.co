@@ -1,0 +1,7 @@
+User-Agent: *
+Allow: /
+Disallow: /conditions-generales-d-utilisation
+Disallow: /charte-ethique
+Disallow: /politique-de-confidentialite
+
+Sitemap: https://www.ulyss.co/sitemap.xml

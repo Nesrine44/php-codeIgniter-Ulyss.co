@@ -1,0 +1,89 @@
+<div class="bg-light lter b-b wrapper-md">
+	<h1 class="m-n font-thin h3">Questionnaire</h1>
+</div>
+
+<div class="wrapper-md" ng-controller="QuestionnaireController">
+	<div class="panel panel-default">
+		<div class="table-responsive">
+			<table ui-jq="dataTable" ui-options="{
+													  sAjaxSource: '{{app.linkapi}}gestion/questionnaire',
+													  oLanguage: { sProcessing:   'Traitement en cours...',
+															   sLengthMenu:   'Afficher _MENU_ éléments',
+															   sZeroRecords:  'Aucun élément à afficher',
+															   sInfo: 'Affichage de l\'élement _START_ à _END_ sur _TOTAL_ éléments',
+															   sInfoEmpty: 'Affichage de l\'élement 0 à 0 sur 0 éléments',
+															   sInfoFiltered: '(filtré de _MAX_ éléments au total)',
+															   sInfoPostFix:  '',
+															   sSearch:       'Rechercher:',
+															   sUrl:          '',
+															   oPaginate: {
+																  sFirst:    'Premier',
+																  sPrevious: 'Précédent',
+																  sNext:     'Suivant',
+																  sLast:     'Dernier'
+																   }
+															  },
+													  aoColumns: [
+														{ mData: 'date_creation' },
+														{ mData: 'candidat_secteur_activite' },
+														{ mData: 'candidat_est_mentor' },
+														{ mData: 'nom_mentor' },
+														{ mData: 'prenom_mentor' },
+														
+														{ mData: 'nom_entreprise' },
+														{ mData: 'secteur_activite' },
+														
+														{ mData: 'connait_entreprise' },
+														{ mData: 'image_entreprise' },
+														{ mData: 'image_entreprise_evolue' },
+														{ mData: 'si_image_evolue' },
+														{ mData: 'rejoindre_entreprise' },
+														{ mData: 'recommandation_ulyss' },
+														{ mData: 'recommandation_ulyss_non' },
+														{ mData: 'mentor_recommande' }
+													  ],
+													}"
+			class="table table-striped m-b-none">
+				<thead>
+					<tr>
+						<th>Date</th>
+						
+						<th>Candidat - Secteur activité</th>
+						<th>Candidat - Est mentor</th>
+						
+						<th>Nom mentor</th>
+						<th>Prénom mentor</th>
+						
+						<!--QUestion 1-->
+						<th>Nom de l'entreprise</th>
+						<th>Secteur activité</th>
+						
+						<!--QUestion 2-->
+						<th>Connaissez vous l'entreprise ?</th>
+						
+						<!--QUestion 3-->
+						<th>Quelle image aviez-vous ?</th>
+						
+						<!--QUestion 4-->
+						<th>Cette image a-elle-évolué ?</th>
+						
+						<!--QUestion 5-->
+						<th>Si oui ?</th>
+						
+						<!--QUestion 6-->
+						<th>Souhaitez-vous rejoindre l'entreprise</th>
+						
+						<!--QUestion 8-->
+						<th>Recommanderiez vous Ulyss.co</th>
+						<th>Pourquoi ?</th>
+						
+						<!--QUestion 7-->
+						<th>Mentor recommandé ?</th>
+					
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</div>
+	</div>
+</div>

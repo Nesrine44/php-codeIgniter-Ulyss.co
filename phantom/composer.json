@@ -1,0 +1,21 @@
+{
+    "name": "carre/pli",
+    "description": "phantom linkedin scrapper",
+    "authors": [
+        {
+            "name": "Khalid Khachabi",
+            "email": "khalid@carre.co.ma"
+        }
+    ],
+    "require": {
+        "jonnyw/php-phantomjs": "4.*"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "PhantomInstaller\\Installer::installPhantomJS"
+        ],
+        "post-update-cmd": [
+            "PhantomInstaller\\Installer::installPhantomJS"
+        ]
+    }
+}

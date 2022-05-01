@@ -1,0 +1,346 @@
+
+
+<div ng-controller="AnnoncesController">
+<div class="modal-header">
+    <h3 class="modal-title">Detail annonce</h3>
+     
+        
+        
+        
+</div>
+<div class="modal-body">
+      <form  name="form" class="form-horizontal form-validation">
+
+<!--         <div class="form-group">
+          <label class="col-sm-2 control-label">Company</label>
+          <div class="col-sm-10">
+            <select ui-jq="chosen"  class="w-md">
+
+                <option ng-selected="{{operator.id == filterCondition.operator}}"
+                          ng-repeat="operator in company"
+                          value="{{operator.id}}">
+                    {{operator.name}}
+                  </option>
+            </select>
+          </div>
+        </div>  -->     
+        <div class="form-group">
+          <label  class="col-sm-2 control-label">Date création</label>
+          <div class="col-md-10">
+             <input type="text" class="form-control" readonly ng-model="annonce.date_creation" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label  class="col-sm-2 control-label">Prénom</label>
+          <div class="col-md-10">
+             <input type="text" class="form-control" readonly ng-model="annonce.prenom" >
+          </div>
+        </div>
+        <div class="form-group">
+          <label  class="col-sm-2 control-label">Nom</label>
+          <div class="col-md-10">
+             <input type="text" class="form-control" readonly ng-model="annonce.nom" >
+          </div>
+        </div>
+        <div class="form-group">
+          <label  class="col-sm-2 control-label">Tel</label>
+          <div class="col-md-10">
+             <input type="text" class="form-control" readonly ng-model="annonce.tel" >
+          </div>
+        </div>
+        <div class="form-group">
+          <label  class="col-sm-2 control-label">E-mail</label>
+          <div class="col-md-10">
+             <input type="text" class="form-control" readonly ng-model="annonce.email" >
+          </div>
+        </div>
+       <div class="form-group">
+          <label  class="col-sm-2 control-label">Ville</label>
+          <div class="col-md-10">
+             <input type="text" class="form-control" readonly ng-model="annonce.ville" >
+          </div>
+        </div>
+<!--   <div class="form-group">
+          <label class="col-sm-2 control-label">Statut</label>
+          <div class="col-sm-10">
+            <select ng-model="annonce.statut_admin" class="form-control m-b">
+                <option  value="En-attente">En-attente</option>
+
+                <option  value="Refusé">Refusé</option>
+                <option  value="Accepté">Accepté</option>
+                <option  value="Lu">Lu</option>
+            </select>
+          </div>
+        </div>  -->
+
+  <div class="line line-dashed b-b line-lg pull-in"></div>
+<!--         <div class="form-group">
+          <label  class="col-sm-2 control-label">Intitulé du cours</label>
+          <div class="col-md-10">
+             <input type="text" class="form-control" readonly ng-model="annonce.titre" >
+          </div>
+        </div> -->
+<!--         <div class="form-group">
+          <label  class="col-sm-2 control-label">Lieu</label>
+          <div class="col-md-10">
+             <input type="text" class="form-control" readonly ng-model="annonce.titre" required>
+          </div>
+        </div> -->
+<!--         <div class="form-group">
+          <label  class="col-sm-2 control-label">Code postal</label>
+          <div class="col-md-10">
+             <input type="text" class="form-control" readonly ng-model="annonce.cp" >
+          </div>
+        </div> 
+        <div class="form-group">
+          <label  class="col-sm-2 control-label">Code postal</label>
+          <div class="col-md-10">
+             <input type="text" class="form-control" readonly ng-model="annonce.cp" >
+          </div>
+        </div>
+
+         <div class="form-group">
+          <label  class="col-sm-2 control-label">Vous exercez une activité professionnelle</label>
+          <div class="col-md-10" >
+          <span ng-if="annonce.pro==1">Oui</span>
+          <span ng-if="annonce.pro==0">Non</span>
+             
+          </div>
+        </div> -->      
+        <div class="form-group">
+          <label  class="col-sm-2 control-label">Tarif Horaire</label>
+          <div class="col-md-10">
+             <input type="text" class="form-control" readonly ng-model="annonce.prix" >
+          </div>
+        </div>     
+<!--         <div class="form-group">
+          <label  class="col-sm-2 control-label">Tarif journalier</label>
+          <div class="col-md-10">
+             <input type="text" class="form-control" readonly ng-model="annonce.prix_journee" >
+          </div>
+        </div> --> 
+<!--         <div class="form-group">
+          <label  class="col-sm-4 control-label help-block m-b-none">{{annonce.reduction}} pourcent de réduction à partir de {{annonce.reduction_heure}} heure</label>
+        </div> 
+        <div class="form-group">
+          <label  class="col-sm-4 control-label help-block m-b-none">{{annonce.reduction_personne}} euros par personne supplémentaire</label>
+        </div> -->
+
+       <div class="form-group">
+          <label  class="col-sm-2 control-label">Présentation</label>
+          <div class="col-md-10">
+       <textarea  class="form-control" ng-model="annonce.description" readonly placeholder="Entrez une actualité" rows="10" ></textarea>
+          </div>
+        </div>
+
+       <div class="form-group">
+          <label  class="col-sm-2 control-label">Format du rendez-vous</label>
+          <div class="col-md-10">
+       <textarea  class="form-control" ng-model="annonce.format_rendez_vous" readonly placeholder="Format du rendez-vous" rows="10" ></textarea>
+          </div>
+        </div>        
+<!--          <div class="form-group">
+          <label  class="col-sm-2 control-label">Les documents uplaodés</label>
+          <div class="col-md-10" >
+          <div class="col-md-4" ng-repeat="doc in documents">
+          <a href="{{doc.fichier}}" target="_blank">{{doc.fichier}}</a><br>
+             
+            </div>
+
+          </div>
+        </div>   --> 
+<!--        <div class="form-group">
+          <label  class="col-sm-2 control-label">Centre d'intéret</label>
+          <div class="col-md-10">
+       <textarea  class="form-control" ng-model="annonce.centre_interet" readonly  rows="10" ></textarea>
+          </div>
+        </div> -->
+  <div class="line line-dashed b-b line-lg pull-in"></div>
+
+<!--          <div class="form-group">
+          <label  class="col-sm-2 control-label">Langue parlée</label>
+          <div class="col-md-10" >
+          <div class=" m-b">
+              <div class="m-b" ng-repeat="lang in langues">
+                <span class="label text-base bg-primary pos-rlt m-r"><i class="arrow right arrow-primary"></i>{{lang.nom}}</span>
+              </div>
+
+
+            </div>
+          </div>
+        </div>  -->
+  <div class="line line-dashed b-b line-lg pull-in"></div>
+
+         <div class="form-group">
+          <label  class="col-sm-2 control-label">Compétences</label>
+          <div class="col-md-10" >
+          <div class=" m-b">
+              <div class="m-b" ng-repeat="tag in tags">
+                <span class="label text-base bg-info pos-rlt m-r"><i class="arrow right arrow-info"></i>{{tag.nom}}</span>
+              </div>
+
+            </div>
+
+          </div>
+        </div> 
+
+  <div class="line line-dashed b-b line-lg pull-in"></div>
+
+         <div class="form-group">
+          <label  class="col-sm-2 control-label">Formations</label>
+          <div class="col-md-10" >
+          <div class=" m-b">
+              <div class="m-b" ng-repeat="forma in formations">
+                <span class="label text-base bg-success pos-rlt m-r"><i class="arrow right arrow-success"></i>{{forma.formation}}</span>
+                <span class="label text-base bg-success pos-rlt m-r"><i class="arrow right arrow-success"></i>{{forma.university}}</span>
+                <span class="label text-base bg-success pos-rlt m-r"><i class="arrow right arrow-success"></i>{{forma.date_debut}} / {{forma.date_fin}}</span>
+              </div>
+
+            </div>
+
+          </div>
+        </div> 
+
+
+  <div class="line line-dashed b-b line-lg pull-in"></div>
+
+         <div class="form-group">
+          <label  class="col-sm-2 control-label">Experiences</label>
+          <div class="col-md-10" >
+          <div class=" m-b">
+              <div class="m-b" ng-repeat="exp in experiences">
+                <span>-</span><span class="label text-base bg-success pos-rlt m-r"><i class="arrow right arrow-success"></i>{{exp.titre_mission}} : {{exp.nom}}  -Departement:{{exp.departement}} -Fonction:{{exp.fonction}}</span>
+  
+                <span class="label text-base bg-success pos-rlt m-r"><i class="arrow right arrow-success"></i>Secteur :{{exp.secteur}} </span>
+                <span class="label text-base bg-success pos-rlt m-r"><i class="arrow right arrow-success"></i>{{exp.date_debut}} / {{exp.date_fin}}</span>
+              </div>
+
+            </div>
+
+          </div>
+        </div> 
+ <div class="line line-dashed b-b line-lg pull-in"></div>
+          <div class="form-group">
+          <label  class="col-sm-2 control-label">Photos</label>
+          <div class="col-md-10" >
+          <div class="col-md-4" ng-repeat="img in portfolio">
+                <img src="{{img.image}}"  height="100" width="100">
+            </div>
+
+          </div>
+        </div> 
+ <div class="line line-dashed b-b line-lg pull-in"></div>
+          <div class="form-group">
+          <label  class="col-sm-2 control-label">Disponibilités</label>
+          <div class="col-md-10" >
+            <table class="table text-center table_diponibilite">
+              <tr>
+                <th></th>
+                <th>Lundi</th>
+                <th>Mardi</th>
+                <th>Mercredi</th>
+                <th>Jeudi</th>
+                <th>Vendredi</th>
+                <th>Samedi</th>
+                <th>Dimanche</th>
+              </tr>
+              <tr>
+                <td>8h-10h</td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1" ng-checked="disponibles.lundi_8_10" name="lundi_8_10" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.mardi_8_10"   name="mardi_8_10" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.mercredi_8_10" name="mercredi_8_10" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.jeudi_8_10" name="jeudi_8_10" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.vendredi_8_10" name="vendredi_8_10" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.samedi_8_10" name="samedi_8_10" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.dimanche_8_10" name="dimanche_8_10" class="check_disp" ></td>
+              </tr>
+              <tr>
+                <td>10h-12h</td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1" ng-checked="disponibles.lundi_10_12" name="lundi_10_12" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.mardi_10_12"   name="mardi_10_12" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.mercredi_10_12" name="mercredi_10_12" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.jeudi_10_12" name="jeudi_10_12" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.vendredi_10_12" name="vendredi_10_12" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.samedi_10_12" name="samedi_10_12" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.dimanche_10_12" name="dimanche_10_12" class="check_disp" ></td>
+              </tr>
+              <tr>
+                <td>12h-14h</td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1" ng-checked="disponibles.lundi_12_14" name="lundi_12_14" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.mardi_12_14"   name="mardi_12_14" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.mercredi_12_14" name="mercredi_12_14" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.jeudi_12_14" name="jeudi_12_14" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.vendredi_12_14" name="vendredi_12_14" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.samedi_12_14" name="samedi_12_14" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.dimanche_12_14" name="dimanche_12_14" class="check_disp" ></td>
+              </tr>
+              <tr>
+                <td>14h-16h</td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1" ng-checked="disponibles.lundi_14_16" name="lundi_14_16" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.mardi_14_16"   name="mardi_14_16" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.mercredi_14_16" name="mercredi_14_16" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.jeudi_14_16" name="jeudi_14_16" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.vendredi_14_16" name="vendredi_14_16" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.samedi_14_16" name="samedi_14_16" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.dimanche_14_16" name="dimanche_14_16" class="check_disp" ></td>
+              </tr>
+              <tr>
+                <td>16h-18h</td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1" ng-checked="disponibles.lundi_16_18" name="lundi_16_18" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.mardi_16_18"   name="mardi_16_18" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.mercredi_16_18" name="mercredi_16_18" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.jeudi_16_18" name="jeudi_16_18" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.vendredi_16_18" name="vendredi_16_18" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.samedi_16_18" name="samedi_16_18" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.dimanche_16_18" name="dimanche_16_18" class="check_disp" ></td>
+              </tr>
+              <tr>
+                <td>18h-20h</td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1" ng-checked="disponibles.lundi_18_20" name="lundi_18_20" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.mardi_18_20"   name="mardi_18_20" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.mercredi_18_20" name="mercredi_18_20" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.jeudi_18_20" name="jeudi_18_20" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.vendredi_18_20" name="vendredi_18_20" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.samedi_18_20" name="samedi_18_20" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.dimanche_18_20" name="dimanche_18_20" class="check_disp" ></td>
+              </tr>
+              <tr>
+                <td>20h-22h</td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1" ng-checked="disponibles.lundi_20_22" name="lundi_20_22" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.mardi_20_22"   name="mardi_20_22" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.mercredi_20_22" name="mercredi_20_22" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.jeudi_20_22" name="jeudi_20_22" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.vendredi_20_22" name="vendredi_20_22" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.samedi_20_22" name="samedi_20_22" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox" disabled="disabled" value="1"  ng-checked="disponibles.dimanche_20_22" name="dimanche_20_22" class="check_disp" ></td>
+              </tr>
+            </table>
+
+          </div>
+        </div>
+<!--        <div class="form-group">
+          <label  class="col-sm-2 control-label">la raison à l'utilisation</label>
+          <div class="col-md-10">
+       <textarea  class="form-control" ng-model="annonce.raison_refuser"  placeholder="Entrez quelques mots si vous avez refusé" rows="10" ></textarea>
+          </div>
+        </div> -->
+
+
+       </form>
+</div>
+<div class="modal-footer" >                  
+    <button class="btn btn-default" ng-click="cancel()">Retour</button>
+   
+<!--     <button class="btn btn-info" ng-click="Accepter()" ng-disabled="form.$invalid">Accepter</button>
+    <button class="btn btn-warning" ng-click="Refuser()" ng-disabled="form.$invalid">Refuser </button> -->
+<!--     <button class="btn btn-primary" ng-click="changeStatut()" ng-disabled="form.$invalid">Enregistrer</button> -->
+
+<div class="panel panel-success" ng-if="sucess">
+    <div class="panel-heading text-center" >{{sucess}}</div>
+    </div>
+
+    <div class="panel panel-info" ng-if="err">
+       <div class="panel-heading text-center" >{{err}}</div> 
+         </div> 
+</div>
+</div>

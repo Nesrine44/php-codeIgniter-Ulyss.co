@@ -1,0 +1,100 @@
+<div class="hbox hbox-auto-xs hbox-auto-sm" ng-init="
+    app.settings.asideFolded = false; 
+    app.settings.asideDock = false;
+  ">
+  <!-- main -->
+  <div class="col" ng-controller="FlotChartDemoCtrl">
+    <!-- main header -->
+    <div class="bg-light lter b-b wrapper-md">
+      <div class="row">
+        <div class="col-sm-3 col-xs-12">
+          <h1 class="m-n font-thin h3 text-black">Accueil </h1>
+          <small class="text-muted">Ulyss</small>
+        </div>
+        <div class="col-sm-9 text-right hidden-xs">
+          <div class="inline m-r text-left">
+
+        <div class="form-group">
+          <div class="col-sm-8" >
+            <div class="input-group w-md">
+              <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+            </div>
+          </div>
+        </div>
+
+
+          </div>
+          <div class="inline text-left">
+            <div class="form-group">
+              <div class="col-sm-8" >
+                <div class="input-group w-md">
+                  <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt2" is-open="opened1" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+                  <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="open1($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+              <div class="form-group">
+                <div class="col-sm-2 col-sm-offset-7">
+                  <button type="submit" class="btn btn-success" ng-click="gotofiltre()" style="margin-top: 10px;
+    margin-left: 113px;">Valider</button>
+                </div>
+              </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- / main header -->
+    <div class="wrapper-md" >
+      <!-- stats -->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row row-sm text-center">
+            <div class="col-xs-6">
+              <a href="/api/gestion/candidat_export?date1={{dt}}&date2={{dt2}}" target="_blank" class="block panel padder-v bg-primary item">
+                <span class="text-white font-thin h1 block">{{nbr_candidat}}</span>
+                <span class="text-muted text-xs">Nombre de candidats</span>
+                <span class="bottom text-right w-full">
+                  <i class="fa fa-cloud-upload text-muted m-r-sm"></i>
+                </span>
+              </a>
+            </div>
+            <div class="col-xs-6">
+              <a href="/api/gestion/mentor_export?date1={{dt}}&date2={{dt2}}" target="_blank" class="block panel padder-v bg-success item">
+                <span class="text-white font-thin h1 block">{{nbr_talent}}</span>
+                <span class="text-muted text-xs">Nombre de mentors</span>
+                <span class="bottom text-right w-full">
+                  <i class="fa fa-cloud-upload text-muted m-r-sm"></i>
+                </span>
+              </a>
+            </div>
+            <div class="col-xs-6">
+              <a href="/api/gestion/allrdv_export?date1={{dt}}&date2={{dt2}}" target="_blank" class="block panel padder-v bg-info item">
+                <span class="text-white font-thin h1 block">{{nbr_demandes}}</span>
+                <span class="text-muted text-xs">Nombre de RDV</span>
+                <span class="bottom text-right w-full">
+                  <i class="fa fa-cloud-upload text-muted m-r-sm"></i>
+                </span>
+              </a>
+            </div>
+            <div class="col-xs-6">
+              <a href="/api/gestion/rdvrealises_export?date1={{dt}}&date2={{dt2}}" target="_blank" class="block panel padder-v bg-danger item">
+                <span class="text-white font-thin h1 block">{{nbr_demandes_valids}}</span>
+                <span class="text-muted text-xs">Nombre de RDV validés</span>
+                <span class="bottom text-right w-full">
+                  <i class="fa fa-cloud-upload text-muted m-r-sm"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

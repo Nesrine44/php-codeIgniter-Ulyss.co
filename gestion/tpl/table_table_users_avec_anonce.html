@@ -1,0 +1,219 @@
+<div class="bg-light lter b-b wrapper-md">
+
+
+
+  <h1 class="m-n font-thin h3">Gestion des Users</h1>
+
+
+
+</div>
+
+
+
+<div class="wrapper-md" ng-controller="UsersController" >
+
+
+
+  <div class="panel panel-default">
+
+
+
+    <div class="panel-heading text-right">
+
+
+        <div class="form-group">
+          <label class="col-sm-3 control-label">Tous les utilisateurs</label>
+          <div class="col-sm-3">
+          <a href="#/app/users">
+            <label class="i-switch m-t-xs m-r">
+              <input type="checkbox" checked>
+              <i></i>
+            </label>
+           </a>
+          </div>
+        </div>
+
+
+
+    </div>
+
+
+
+    <div class="table-responsive">
+
+
+
+      <table ui-jq="dataTable" ui-options="{
+
+
+
+          sAjaxSource: '{{app.linkapi}}gestion/users_with_annonce',
+
+          oLanguage: { sProcessing:   'Traitement en cours...',
+
+
+
+                   sLengthMenu:   'Afficher _MENU_ éléments',
+
+
+
+                   sZeroRecords:  'Aucun élément à afficher',
+
+
+
+                   sInfo: 'Affichage de l\'élement _START_ à _END_ sur _TOTAL_ éléments',
+
+    
+
+                   sInfoEmpty: 'Affichage de l\'élement 0 à 0 sur 0 éléments',
+
+    
+
+                   sInfoFiltered: '(filtré de _MAX_ éléments au total)',
+
+    
+
+                   sInfoPostFix:  '',
+
+    
+
+                   sSearch:       'Rechercher:',
+
+    
+
+                   sUrl:          '',
+
+    
+
+                   oPaginate: {
+
+    
+
+                      sFirst:    'Premier',
+
+      
+
+                      sPrevious: 'Précédent',
+
+      
+
+                      sNext:     'Suivant',
+
+                      sLast:     'Dernier'
+
+                       }
+
+
+
+                  },
+
+
+
+          aoColumns: [
+
+
+            { mData: 'nom' },
+            { mData: 'email' },
+            
+            { mData: 'tel' },
+            { mData: 'date_naissance' },
+            { mData: 'annonce' },
+            { mData: 'active' },
+            { mData: 'talent' },
+
+
+            { mData: 'supp' }
+
+
+
+          ],
+
+
+
+
+        }" class="table table-striped m-b-none">
+
+
+
+        <thead>
+
+
+
+          <tr>
+
+
+            <th  style="width:25%">Nom Complet</th> 
+            <th  style="width:25%">Email</th> 
+            <th  style="width:25%">Tél</th> 
+            <th  style="width:25%">Date naissance</th> 
+            <th  style="width:25%">Annonce</th> 
+            <th  style="width:25%">Etat</th> 
+            <th  style="width:25%">Talent</th> 
+            
+              <th>Actions</th>
+
+
+
+          </tr>
+
+
+
+        </thead>
+
+
+
+        <tbody>
+
+
+
+        </tbody>
+
+
+
+      </table>
+
+
+
+    </div>
+
+
+
+  </div>
+
+
+
+       
+
+        <script type="text/ng-template" id="myModalContentConfirmation.html">
+
+
+
+            <div ng-include="'tpl/modal/modal-confirmation.html'"></div>
+
+
+
+          </script>
+
+
+
+
+
+
+
+           <script type="text/ng-template" id="myModalContent.html">
+
+
+
+            <div ng-include="'tpl/modal/add_edit_users.html'"></div>
+
+
+
+          </script>
+
+
+
+
+
+
+
+</div>

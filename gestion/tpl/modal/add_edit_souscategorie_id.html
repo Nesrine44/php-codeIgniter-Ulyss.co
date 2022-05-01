@@ -1,0 +1,111 @@
+<div>
+
+
+
+<div class="modal-header">
+
+
+
+    <h3 class="modal-title">Gestion des fonctions</h3>
+
+
+
+</div>
+
+
+
+<div class="modal-body">
+
+
+      <form  name="form" class="form-validation" novalidate>
+
+
+
+
+        <div class="form-group">
+
+
+
+          <label>Nom</label>
+
+
+
+            
+
+
+
+          <input type="text" class="form-control" ng-model="souscategorie.nom" placeholder="Enter nom" required>
+
+
+
+        </div>
+<!--           <div class="form-group">
+          <label >Departements</label>
+          <div >
+            <select ui-jq="chosen" ng-model="souscategorie.fonction" multiple class="w-md">
+              <option ng-repeat="sect in fonctions" value="{{sect.id}}">{{sect.name}}</option>
+            </select>
+          </div>
+        </div>  -->
+<!--           <div class="form-group">
+          <label >Departements1</label>
+          <div > -->
+<!--             <select ui-jq="chosen" ng-model="souscategorie.fonction" multiple class="w-md" ng-options="sect.name for sect in fonctions"> 
+             <option ng-repeat="sect in fonctions" value="{{sect.id}}">{{sect.nom}}</option> 
+            </select> -->
+<!-- 
+      <select
+      ui-jq="chosen"
+        chosen multiple
+        ng-model="souscategorie.fonction"
+        ng-options="s.id as s.name for s in fonctions">
+          <option value=""></option>
+      </select> -->
+
+
+          </div>
+        </div> 
+
+ <div class="form-group">
+
+    <label>Activer</label>
+        
+      <select name="active" ng-model="souscategorie.active">
+      <option value="1">Oui</option>
+      <option value="0">Non</option>
+    </select><br>
+
+
+        </div>
+
+
+
+        </form>
+
+
+
+    </div>
+
+
+
+<div class="modal-footer">                  
+
+
+
+    <button class="btn btn-default" ng-click="cancel()">Annuler</button>
+
+
+
+    <button class="btn btn-primary" type="submit" ng-click="ok()" ng-disabled="form.$invalid">Enregistrer</button>
+
+
+
+</div>
+
+
+
+</div>
+
+<style type="text/css">
+  .clserror{border-color: #f05050 !important;}
+</style>

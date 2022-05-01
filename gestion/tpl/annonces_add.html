@@ -1,0 +1,307 @@
+<div ng-controller="AnnoncesControllerAdd">
+<div class="modal-header">
+    <h3 class="modal-title">Add annonce</h3>      
+</div>
+<div class="modal-body">
+      <form  name="form" class="form-horizontal form-validation">   
+
+         <div class="form-group">
+         <label  class="col-sm-2 control-label">Utilisateur</label>
+          <div class="col-md-10">
+           <select class="form-control" ng-model="annonce.user_id" >
+           <option ng-repeat="user in users" value="{{user.id}}">{{user.nom}}</option>
+
+          </select>
+          </div>
+            </div>
+        <div class="form-group">
+          <label  class="col-sm-2 control-label">Public profil</label>
+          <div class="col-md-10">
+             <input type="text" class="form-control"  ng-model="annonce.public_profil" >
+          </div>
+        </div> 
+        <div class="form-group">
+          <label  class="col-sm-2 control-label">Honoraires pour 30 minutes</label>
+          <div class="col-md-10">
+             <input type="text" class="form-control"  ng-model="annonce.prix" >
+          </div>
+        </div>     
+         <div class="form-group">
+          <label  class="col-sm-2 control-label">Réduction </label>
+          <div class="col-md-10">
+             <input type="text" class="form-control"  ng-model="annonce.reduction" >
+          </div>
+        </div>   
+       <div class="form-group">
+          <label  class="col-sm-2 control-label">Description</label>
+          <div class="col-md-10">
+       <textarea  class="form-control" ng-model="annonce.description"  placeholder="Entrez une actualité" rows="10" ></textarea>
+          </div>
+        </div>
+
+ 
+
+  <div class="line line-dashed b-b line-lg pull-in"></div>
+         <div class="form-group">
+          <label  class="col-sm-2 control-label">Compétences</label>
+
+
+          <div class="col-md-10" >
+<!--             <select class="form-control"  ng-model="selectedItem" ng-change="updateComp()">
+              <option value="">Choisir un tag</option>
+              <option ng-repeat="tag in tags" value="{{tag.id}}" >{{tag.nom}}</option>
+            </select> -->
+<select class="form-control" ng-options="size as size.nom for size in tags  track by size.id" 
+   ng-model="selectedItem" ng-change="updateComp()"></select>
+          <div class=" m-b">
+              <div class="m-b" ng-repeat="tagg in taglist">
+                <span class="label text-base bg-info pos-rlt m-r"><i class="arrow right arrow-info"></i>{{tagg.nom}}</span>
+              </div>
+            </div>
+          </div>
+        </div> 
+ <div class="line line-dashed b-b line-lg pull-in"></div>
+ <div class="form-group">
+     <label  class="col-sm-2 control-label">Formations</label>
+<div class="col-sm-6">
+      <div class="panel panel-default">
+        <div class="panel-heading font-bold">Formations</div>
+        <div class="panel-body">
+          <form role="form" class="ng-pristine ng-valid">
+            <div class="form-group">
+              <label>University</label>
+              <input type="text" ng-model="formations.university" class="form-control" placeholder="University">
+            </div>
+
+            <div class="form-group">
+              <label>Lieu</label>
+              <input type="text" ng-model="formations.lieu" class="form-control" placeholder="Lieu">
+            </div>
+
+            <div class="form-group">
+              <label>Formation</label>
+              <input type="text" ng-model="formations.formation"  class="form-control" placeholder="Formation">
+            </div>
+            <div class="form-group">
+              <label>Date debut</label>
+              <input type="text" ng-model="formations.date_debut"  class="form-control" placeholder="date debut">
+            </div>
+            <div class="form-group">
+              <label>Date fin</label>
+              <input type="text" ng-model="formations.date_fin"  class="form-control" placeholder="date fin">
+            </div>
+            <div class="form-group">
+              <label>Description</label>
+              <input type="text" ng-model="formations.description"  class="form-control" placeholder="description">
+            </div>
+
+            <button type="submit" ng-click="addformation()" class="btn btn-sm btn-primary">Ajouter</button>
+          </form>
+        </div>
+      </div>
+    </div>
+<div class="col-sm-4">
+	          <div class=" m-b">
+              <div class="m-b" ng-repeat="forma in formationlist">
+                <span class="label text-base bg-info pos-rlt m-r"><i class="arrow right arrow-info"></i>{{forma.university}} : {{forma.formation}} Date:{{forma.date_debut}} - {{forma.date_fin}}</span>
+              </div>
+            </div>
+
+</div>
+
+
+
+    </div>
+
+ <div class="line line-dashed b-b line-lg pull-in"></div>
+ <div class="form-group">
+     <label  class="col-sm-2 control-label">Experiences</label>
+<div class="col-sm-6">
+      <div class="panel panel-default">
+        <div class="panel-heading font-bold">Experiences</div>
+        <div class="panel-body">
+          <form role="form" class="ng-pristine ng-valid">
+            <div class="form-group">
+              <label>Titre</label>
+              <input type="text" ng-model="experience.titre_mission" class="form-control" placeholder="Titre">
+            </div>
+
+         <div class="form-group">
+              <label>Entreprise</label>
+           <select class="form-control" ng-model="experience.entreprise_id" >
+           <option ng-repeat="comp in entreprise" value="{{comp.id}}">{{comp.nom}}</option>
+          </select>
+            </div>
+         <div class="form-group">
+              <label>Secteur</label>
+           <select class="form-control" ng-model="experience.secteur_id" >
+           <option ng-repeat="sect in secteurs" value="{{sect.id}}">{{sect.nom}}</option>
+          </select>
+            </div>
+         <div class="form-group">
+              <label>Fonction</label>
+           <select class="form-control" ng-model="experience.fonction_id" >
+           <option ng-repeat="fonct in fonctions" value="{{fonct.id}}">{{fonct.nom}}</option>
+          </select>
+            </div>
+
+         <div class="form-group">
+              <label>Departement</label>
+           <select class="form-control" ng-model="experience.departement_id" >
+           <option ng-repeat="depart in departements" value="{{depart.id}}">{{depart.name}}</option>
+          </select>
+            </div>
+
+            <div class="form-group">
+              <label>Date debut</label>
+        <!--       <input type="text" ng-model="formations.date_debut"  class="form-control" placeholder="date debut"> -->
+
+<input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="experience.date_debut" is-open="opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+
+
+            </div>
+            <div class="form-group">
+              <label>Date fin</label>
+             <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="experience.date_fin" is-open="opened1" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open1($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+            </div>
+            <div class="form-group">
+              <label>Description</label>
+              <input type="text" ng-model="experience.description"  class="form-control" placeholder="description">
+            </div>
+            <div class="form-group">
+              <label>Ville</label>
+              <input type="text" ng-model="experience.lieu"  class="form-control" placeholder="Ville">
+            </div>
+            <button type="submit" ng-click="addExperience()" class="btn btn-sm btn-primary">Ajouter</button>
+          </form>
+        </div>
+      </div>
+    </div>
+<div class="col-sm-4">
+	          <div class=" m-b">
+              <div class="m-b" ng-repeat="exp in experiencelist">
+                <span class="label text-base bg-info pos-rlt m-r"><i class="arrow right arrow-info"></i>{{exp.titre_mission}}</span>
+              </div>
+            </div>
+
+</div>
+
+
+
+    </div>
+
+
+
+ <div class="line line-dashed b-b line-lg pull-in"></div>
+          <div class="form-group">
+          <label  class="col-sm-2 control-label">Disponibilités</label>
+          <div class="col-md-10" >
+            <table class="table text-center table_diponibilite">
+              <tr>
+                <th></th>
+                <th>Lundi</th>
+                <th>Mardi</th>
+                <th>Mercredi</th>
+                <th>Jeudi</th>
+                <th>Vendredi</th>
+                <th>Samedi</th>
+                <th>Dimanche</th>
+              </tr>
+              <tr>
+                <td>8h-10h</td>
+                <td class="horaire_td active"><input type="checkbox"  value="1" ng-checked="annonce.lundi_8_10" name="lundi_8_10" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.mardi_8_10"   name="mardi_8_10" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.mercredi_8_10" name="mercredi_8_10" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.jeudi_8_10" name="jeudi_8_10" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.vendredi_8_10" name="vendredi_8_10" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.samedi_8_10" name="samedi_8_10" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.dimanche_8_10" name="dimanche_8_10" class="check_disp" ></td>
+              </tr>
+              <tr>
+                <td>10h-12h</td>
+                <td class="horaire_td active"><input type="checkbox"  value="1" ng-checked="annonce.lundi_10_12" name="lundi_10_12" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.mardi_10_12"   name="mardi_10_12" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.mercredi_10_12" name="mercredi_10_12" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.jeudi_10_12" name="jeudi_10_12" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.vendredi_10_12" name="vendredi_10_12" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.samedi_10_12" name="samedi_10_12" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.dimanche_10_12" name="dimanche_10_12" class="check_disp" ></td>
+              </tr>
+              <tr>
+                <td>12h-14h</td>
+                <td class="horaire_td active"><input type="checkbox"  value="1" ng-checked="annonce.lundi_12_14" name="lundi_12_14" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.mardi_12_14"   name="mardi_12_14" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.mercredi_12_14" name="mercredi_12_14" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.jeudi_12_14" name="jeudi_12_14" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.vendredi_12_14" name="vendredi_12_14" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.samedi_12_14" name="samedi_12_14" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.dimanche_12_14" name="dimanche_12_14" class="check_disp" ></td>
+              </tr>
+              <tr>
+                <td>14h-16h</td>
+                <td class="horaire_td active"><input type="checkbox"  value="1" ng-checked="annonce.lundi_14_16" name="lundi_14_16" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.mardi_14_16"   name="mardi_14_16" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.mercredi_14_16" name="mercredi_14_16" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.jeudi_14_16" name="jeudi_14_16" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.vendredi_14_16" name="vendredi_14_16" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.samedi_14_16" name="samedi_14_16" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.dimanche_14_16" name="dimanche_14_16" class="check_disp" ></td>
+              </tr>
+              <tr>
+                <td>16h-18h</td>
+                <td class="horaire_td active"><input type="checkbox"  value="1" ng-checked="annonce.lundi_16_18" name="lundi_16_18" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.mardi_16_18"   name="mardi_16_18" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.mercredi_16_18" name="mercredi_16_18" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.jeudi_16_18" name="jeudi_16_18" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.vendredi_16_18" name="vendredi_16_18" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.samedi_16_18" name="samedi_16_18" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.dimanche_16_18" name="dimanche_16_18" class="check_disp" ></td>
+              </tr>
+              <tr>
+                <td>18h-20h</td>
+                <td class="horaire_td active"><input type="checkbox"  value="1" ng-checked="annonce.lundi_18_20" name="lundi_18_20" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.mardi_18_20"   name="mardi_18_20" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.mercredi_18_20" name="mercredi_18_20" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.jeudi_18_20" name="jeudi_18_20" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.vendredi_18_20" name="vendredi_18_20" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.samedi_18_20" name="samedi_18_20" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.dimanche_18_20" name="dimanche_18_20" class="check_disp" ></td>
+              </tr>
+              <tr>
+                <td>20h-22h</td>
+                <td class="horaire_td active"><input type="checkbox"  value="1" ng-checked="annonce.lundi_20_22" name="lundi_20_22" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.mardi_20_22"   name="mardi_20_22" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.mercredi_20_22" name="mercredi_20_22" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.jeudi_20_22" name="jeudi_20_22" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.vendredi_20_22" name="vendredi_20_22" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.samedi_20_22" name="samedi_20_22" class="check_disp" ></td>
+                <td class="horaire_td active"><input type="checkbox"  value="1"  ng-checked="annonce.dimanche_20_22" name="dimanche_20_22" class="check_disp" ></td>
+              </tr>
+            </table>
+
+          </div>
+        </div>
+ 
+
+
+       </form>
+</div>
+<div class="modal-footer" >                  
+    <button class="btn btn-default" ng-click="cancel()">Annuler</button>
+   
+
+    <button class="btn btn-primary" ng-click="addAnnonce()" ng-disabled="form.$invalid">Enregistrer</button>
+
+<div class="panel panel-success" ng-if="sucess">
+    <div class="panel-heading text-center" >{{sucess}}</div>
+    </div>
+
+    <div class="panel panel-info" ng-if="err">
+       <div class="panel-heading text-center" >{{err}}</div> 
+         </div> 
+</div>
+</div>

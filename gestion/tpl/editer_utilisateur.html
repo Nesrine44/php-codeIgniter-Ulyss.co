@@ -1,0 +1,89 @@
+
+
+<div ng-controller="utilisateurController">
+<div class="modal-header">
+    <h3 class="modal-title">Modifications Utilisateur</h3>
+     
+        
+        
+        
+</div>
+<div class="modal-body">
+      <form  name="form" class="form-horizontal form-validation">
+
+        <div class="form-group">
+          <label  class="col-sm-2 control-label">Prénom</label>
+          <div class="col-md-10">
+             <input type="text" class="form-control"  ng-model="utilisateur.prenom" >
+          </div>
+        </div>
+        <div class="form-group">
+          <label  class="col-sm-2 control-label">Nom</label>
+          <div class="col-md-10">
+             <input type="text" class="form-control"  ng-model="utilisateur.nom" >
+          </div>
+        </div>
+        <div class="form-group">
+          <label  class="col-sm-2 control-label">Tel</label>
+          <div class="col-md-10">
+             <input type="text" class="form-control"  ng-model="utilisateur.tel" >
+          </div>
+        </div>
+        <div class="form-group">
+          <label  class="col-sm-2 control-label">E-mail</label>
+          <div class="col-md-10">
+             <input type="email" class="form-control"  ng-model="utilisateur.email" >
+          </div>
+        </div>
+       <div class="form-group">
+          <label  class="col-sm-2 control-label">Date naissance</label>
+          <div class="col-md-10">
+             <input type="text" class="form-control"  ng-model="utilisateur.date_naissance" >
+          </div>
+        </div>
+       <div class="form-group">
+          <label  class="col-sm-2 control-label">Sexe</label>
+          <div class="col-md-10">
+             <input type="text" class="form-control"  ng-model="utilisateur.sexe" >
+          </div>
+        </div>
+       <div class="form-group">
+          <label  class="col-sm-2 control-label">Date inscription</label>
+          <div class="col-md-10">
+             <input type="text" class="form-control"  ng-model="utilisateur.date_creation" >
+          </div>
+        </div>
+       <div class="form-group">
+          <label  class="col-sm-2 control-label">Biographie</label>
+          <div class="col-md-10">
+       <textarea  class="form-control" ng-model="utilisateur.biographie"   rows="10" ></textarea>
+          </div>
+        </div>
+
+       <div class="form-group">
+          <label  class="col-sm-2 control-label">Adresse</label>
+          <div class="col-md-10">
+       <textarea  class="form-control" ng-model="utilisateur.adresse"   rows="10" ></textarea>
+          </div>
+        </div>
+
+ 
+
+
+
+       </form>
+</div>
+<div class="modal-footer" >                  
+    <button class="btn btn-default" ng-click="cancel()">Fermer</button>
+
+    <button class="btn btn-primary" ng-click="enregistrer()" ng-disabled="form.$invalid">Enregistrer</button>
+
+<div class="panel panel-success" ng-if="sucess">
+    <div class="panel-heading text-center" >{{sucess}}</div>
+    </div>
+
+    <div class="panel panel-info" ng-if="err">
+       <div class="panel-heading text-center" >{{err}}</div> 
+         </div> 
+</div>
+</div>

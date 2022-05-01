@@ -1,0 +1,159 @@
+<div class="bg-light lter b-b wrapper-md">
+
+
+
+  <h1 class="m-n font-thin h3">Paiements</h1>
+
+
+
+</div>
+
+
+
+<div class="wrapper-md" ng-controller="ConfigController">
+
+
+
+  <div class="panel panel-default">
+
+
+
+    <div class="panel-heading text-right">
+
+
+
+ <!-- <button class="btn m-b-xs btn-sm btn-success btn-addon" ng-click="open()"><i class="fa fa-plus"></i>
+
+
+
+  Nouvelle ville </button> -->
+
+
+
+    </div>
+
+
+
+    <div class="table-responsive">
+
+
+
+      <table ui-jq="dataTable" ui-options="{
+
+
+
+          sAjaxSource: '{{app.linkapi}}gestion/paiements',
+
+          oLanguage: { sProcessing:   'Traitement en cours...',
+
+
+
+                   sLengthMenu:   'Afficher _MENU_ éléments',
+
+
+
+                   sZeroRecords:  'Aucun élément à afficher',
+
+
+
+                   sInfo: 'Affichage de l\'élement _START_ à _END_ sur _TOTAL_ éléments',
+
+    
+
+                   sInfoEmpty: 'Affichage de l\'élement 0 à 0 sur 0 éléments',
+
+    
+
+                   sInfoFiltered: '(filtré de _MAX_ éléments au total)',
+
+    
+
+                   sInfoPostFix:  '',
+
+    
+
+                   sSearch:       'Rechercher:',
+
+    
+
+                   sUrl:          '',
+
+    
+
+                   oPaginate: {
+
+    
+
+                      sFirst:    'Premier',
+
+      
+
+                      sPrevious: 'Précédent',
+
+      
+
+                      sNext:     'Suivant',
+
+                      sLast:     'Dernier'
+
+                       }
+
+
+
+                  },
+
+
+
+          aoColumns: [
+
+
+            { mData: 'achteur' },
+           
+            { mData: 'titre' },
+             { mData: 'pay_in_montant' },
+             { mData: 'pay_in_date' },
+            { mData: 'paye' },
+            { mData: 'status' },
+
+
+
+
+
+
+
+          ],
+
+
+
+          
+
+
+
+        }" class="table table-striped m-b-none">
+ <thead>
+          <tr>
+            <th  style="width:25%">Achteur</th> 
+            <th  style="width:25%">Discipline</th> 
+            <th  style="width:25%">Montant</th> 
+            <th  style="width:25%">Date</th> 
+            <!-- <th  style="width:25%">valeur</th>  -->
+            <th  style="width:25%">Payé</th>         
+            <th  style="width:25%">Status</th>         
+    
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+ </div>
+  </div>
+        <script type="text/ng-template" id="myModalContentConfirmation.html">
+            <div ng-include="'tpl/modal/modal-confirmation.html'"></div>
+          </script>
+           <script type="text/ng-template" id="myModalContent.html">
+            <div ng-include="'tpl/modal/add_edit_config.html'"></div>
+          </script>
+             <script type="text/ng-template" id="myModalContent1.html">
+            <div ng-include="'tpl/modal/add_edit_config_wisiwyg.html'"></div>
+          </script>
+</div>

@@ -1,0 +1,63 @@
+#jobsModal .modal-content {
+    width: 100vh;
+    background-color: #00b3ee;
+    background: repeating-linear-gradient(45deg, #FFF, #fff 280px, #00b3ee7a 0px, #00b3ee 900px);
+    margin: auto;
+}
+
+#jobsModal .modal-content .row {
+    width: 300px;
+    margin: auto;
+}
+
+#jobsModal .modal-content .row h1 {
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.section-job1, .section-job2 {
+    width: 100%;
+    height: fit-content;
+    background-color: #000000eb;
+}
+
+#jobsModal .modal-content .row input, #jobsModal .modal-content .row select {
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(231, 231, 231);
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    display: block;
+    width: 100%;
+    line-height: 40px;
+    padding: 0 20px;
+    font-size: 14px;
+    color: #353535;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin-bottom: 10px;
+
+}
+
+.logo_ent_job {
+    margin: 30px auto;
+    border-radius: 50px;
+    width: 100px;
+    display: block;
+}
+
+.btn_job {
+    color: #00b3ee;
+    background: #fff;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    border: none;
+    border-radius: 30px;
+    line-height: 40px;
+    font-size: 14px;
+    letter-spacing: 0.6px;
+    padding: 0 20px 0 20px;
+    width: 100%;
+}

@@ -1,0 +1,9 @@
+<toolSet name="External Tools">
+  <tool name="phpDocumentator" showInMainMenu="true" showInEditor="true" showInProject="true" showInSearchPopup="true" disabled="false" useConsole="true" showConsoleOnStdOut="false" showConsoleOnStdErr="false" synchronizeAfterRun="true">
+    <exec>
+      <option name="COMMAND" value="/Applications/phpDocumentor.phar" />
+      <option name="PARAMETERS" value="-d &quot;/localhost/resine_gestion/&quot; -t &quot;/localhost/resine_gestion/doc/&quot;" />
+      <option name="WORKING_DIRECTORY" value="/tmp" />
+    </exec>
+  </tool>
+</toolSet>

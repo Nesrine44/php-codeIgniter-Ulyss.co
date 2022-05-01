@@ -1,0 +1,65 @@
+
+
+<div ng-controller="AnnoncesController">
+<div class="modal-header">
+    <h3 class="modal-title">Detail coup de coueur</h3>
+     
+        
+        
+        
+</div>
+<div class="modal-body">
+      <form  name="form" class="form-horizontal form-validation">
+
+<!--         <div class="form-group">
+          <label class="col-sm-2 control-label">Company</label>
+          <div class="col-sm-10">
+            <select ui-jq="chosen"  class="w-md">
+
+                <option ng-selected="{{operator.id == filterCondition.operator}}"
+                          ng-repeat="operator in company"
+                          value="{{operator.id}}">
+                    {{operator.name}}
+                  </option>
+            </select>
+          </div>
+        </div>  -->     
+
+
+
+  <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group">
+          <label  class="col-sm-2 control-label">Intitulé du cours</label>
+          <div class="col-md-10">
+             <input type="text" class="form-control" readonly ng-model="annonce.titre" >
+          </div>
+        </div>
+
+ <div class="line line-dashed b-b line-lg pull-in"></div>
+
+           <div class="form-group">
+          <label  class="col-sm-2 control-label">Photo coup de coeur</label>
+          <div class="col-md-10" >
+         <input ui-jq="filestyle" file-model="myFile" type="file" required data-icon="false" data-classButton="btn btn-default" data-classInput=" inline v-middle input-s">
+
+          </div>
+        </div> 
+
+
+
+       </form>
+</div>
+<div class="modal-footer" >                  
+    <button class="btn btn-default" ng-click="cancel1()">Annuler</button>
+
+    <button class="btn btn-primary" ng-click="changePhoto()" ng-disabled="form.$invalid">Enregistrer la photo coup de coeur</button>
+
+<div class="panel panel-success" ng-if="sucess">
+    <div class="panel-heading text-center" >{{sucess}}</div>
+    </div>
+
+    <div class="panel panel-info" ng-if="err">
+       <div class="panel-heading text-center" >{{err}}</div> 
+         </div> 
+</div>
+</div>

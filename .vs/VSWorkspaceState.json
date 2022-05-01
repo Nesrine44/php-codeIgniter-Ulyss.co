@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\application",
+    "\\application\\controllers",
+    "\\application\\controllers\\entreprise",
+    "\\application\\views",
+    "\\application\\views\\profil",
+    "\\application\\views\\profil\\talent"
+  ],
+  "SelectedNode": "\\application\\controllers\\entreprise\\Entreprises.php",
+  "PreviewInSolutionExplorer": false
+}

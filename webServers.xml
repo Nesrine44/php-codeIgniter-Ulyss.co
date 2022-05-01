@@ -1,0 +1,20 @@
+<application>
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="ff07fb9a-76e1-4c95-81c5-3b5c3d14fa2a" name="testPhoneGap" url="http://192.168.1.123:3000/">
+        <fileTransfer port="0" accessType="LOCAL" />
+      </webServer>
+      <webServer id="a1c5421f-301c-492b-81e9-eaf2355bcc51" name="listengo" url="https://www.mairies-listengo.com">
+        <fileTransfer host="ftp.cluster003.ovh.net" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" showHiddenFiles="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="b325cbef-901b-4563-84fe-3ee8514c86df" name="MAIF" url="http://maif-comparateur.dev">
+        <fileTransfer port="0" accessType="LOCAL" />
+      </webServer>
+    </option>
+  </component>
+</application>

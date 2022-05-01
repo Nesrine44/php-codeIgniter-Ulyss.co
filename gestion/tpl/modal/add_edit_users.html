@@ -1,0 +1,76 @@
+<div>
+
+
+
+<div class="modal-header">
+
+
+
+    <h4 class="modal-title" class="modal-title">Détails:</h4>
+
+
+
+</div>
+
+
+
+<div class="modal-body">
+
+ <form  name="form" class="form-validation" novalidate>
+ <div class="form-group modal-header" >
+     <label>Avatar:   </label><br>
+    <img src="{{users.baseurl}}upload/avatar/{{users.avatar}}" alt="" width="50">
+     
+ </div>
+  <div class="form-group modal-header">
+     <label>Nom : <h4 class="modal-title">{{users.nom}}</h4></label>
+     
+ </div>
+
+     <div class="form-group modal-header ">
+     <label>Prénom</label>
+     <h4 class="modal-title">{{users.prenom}}</h4>
+ </div>
+  <div class="form-group modal-header">
+     <label>Email</label>
+     <h4 class="modal-title">{{users.email}}</h4>
+ </div>
+ <div class="form-group modal-header">
+     <label>Tél</label>
+     <h4 class="modal-title">{{users.tel}}</h4>
+ </div>
+<div class="form-group modal-header">
+     <label>Date naissance</label>
+     <h4 class="modal-title">{{users.date_naissance}}</h4>
+ </div>
+
+ <div class="form-group modal-header">
+     <label>Adresse</label>
+     <h4 class="modal-title">{{users.adresse}}</h4>
+ </div>
+ <div class="form-group modal-header">
+     <label>Date inscription</label>
+     <h4 class="modal-title">{{users.date_creation}}</h4>
+ </div>
+      </form>
+
+
+
+    </div>
+
+
+
+<div class="modal-footer">                  
+
+    <button class="btn btn-default" ng-click="cancel()">Annuler</button>
+
+
+</div>
+
+
+
+</div>
+
+<style type="text/css">
+  .clserror{border-color: #f05050 !important;}
+</style>

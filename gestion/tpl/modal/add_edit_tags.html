@@ -1,0 +1,83 @@
+<div>
+
+
+
+<div class="modal-header">
+
+
+
+    <h3 class="modal-title">Gestion des Compétences</h3>
+
+
+
+</div>
+
+
+
+<div class="modal-body">
+
+
+
+
+
+
+
+
+
+
+
+      <form  name="form" class="form-validation" novalidate>
+
+
+
+
+        <div class="form-group">
+
+
+
+          <label>Nom</label>
+
+
+
+            
+
+
+
+          <input type="text" class="form-control" ng-model="langs.nom" placeholder="Enter nom" required>
+
+
+
+        </div>
+
+    
+
+
+      </form>
+
+
+
+    </div>
+
+
+
+<div class="modal-footer">                  
+
+
+
+    <button class="btn btn-default" ng-click="cancel()">Annuler</button>
+
+
+
+    <button class="btn btn-primary" type="submit" ng-click="ok()" ng-disabled="form.$invalid">Enregistrer</button>
+
+
+
+</div>
+
+
+
+</div>
+
+<style type="text/css">
+  .clserror{border-color: #f05050 !important;}
+</style>

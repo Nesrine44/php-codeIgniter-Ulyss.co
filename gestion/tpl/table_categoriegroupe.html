@@ -1,0 +1,62 @@
+<div class="bg-light lter b-b wrapper-md">
+    <h1 class="m-n font-thin h3">Départements</h1>
+</div>
+<div class="wrapper-md" ng-controller="GroupecategorieController" >
+    <div class="panel panel-default">
+        <div class="panel-heading text-right">
+            <a href="/api/gestion/departements_export" class="btn m-b-xs btn-sm btn-primary btn-addon"><i class="fa fa-file-excel-o"></i>Exporter les départements</a>
+        </div>
+        <div class="table-responsive">
+            <table ui-jq="dataTable" ui-options="{
+          sAjaxSource: '{{app.linkapi}}gestion/departements',
+          oLanguage: { sProcessing:   'Traitement en cours...',
+                   sLengthMenu:   'Afficher _MENU_ éléments',
+                   sZeroRecords:  'Aucun élément à afficher',
+                   sInfo: 'Affichage de l\'élement _START_ à _END_ sur _TOTAL_ éléments',
+                   sInfoEmpty: 'Affichage de l\'élement 0 à 0 sur 0 éléments',
+                   sInfoFiltered: '(filtré de _MAX_ éléments au total)',
+                   sInfoPostFix:  '',
+                   sSearch:       'Rechercher:',
+                   sUrl:          '',
+                   oPaginate: {
+                      sFirst:    'Premier',
+                      sPrevious: 'Précédent',
+                      sNext:     'Suivant',
+                      sLast:     'Dernier'
+                       }
+                  },
+          aoColumns: [
+            { mData: 'id' },
+            { mData: 'nom' },
+            { mData: 'nbr_candidat' },
+            { mData: 'nbr_mentor' },
+          ],
+        }" class="table table-striped m-b-none">
+                <thead>
+                <tr>
+                    <th  style="width:30%">id</th>
+                    <th  style="width:40%">Nom</th>
+                    <th style="width:15%">Nb cand.</th>
+                    <th style="width:15%">Nb mentor</th>
+                </tr>
+                
+                
+                
+                </thead>
+                
+                
+                
+                <tbody>
+                
+                
+                
+                </tbody>
+            
+            
+            
+            </table>
+        </div>
+    
+    </div>
+
+</div>

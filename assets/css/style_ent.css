@@ -1,0 +1,1303 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Muli|Noto+Sans');
+
+body {
+    font-family: "Myriad Pro", sans-serif;
+}
+
+.head_pro {
+    background-image: url("/assets/img/COVER_GENERIQUE_ENTREPRISE.jpg");
+    background-position: center;
+    min-height: 310px;
+    background-size: cover !important;
+    position: relative;
+    margin-top: 70px;
+}
+
+.head_pro p {
+    position: absolute;
+    color: #fff;
+    bottom: 0;
+    right: 20px;
+    font-size: 11px;
+}
+
+.container {
+    font-family: "Myriad Pro";
+}
+
+.container .row li.active a {
+    color: #26a6e1 !important;
+}
+
+.ico_social img {
+    width: 48px;
+    border-radius: 10px;
+    float: left;
+    margin: 0 10px 40px 10px;
+}
+
+.penModif {
+    height: 20px;
+    margin-left: 10px;
+}
+
+.hideMentor {
+    display: none !important;
+}
+
+.seeles, .seelessJob, .seemoreJob, .seemoreM, .seelesM {
+    background: 0 0;
+    border: 1px solid #3abee8;
+    color: #3abee8;
+    border-radius: 20px;
+    padding: 10px 20px;
+    float: right;
+}
+
+/*** MENU ***/
+.menu {
+    width: fit-content;
+    position: absolute;
+    margin: 9px 22px;
+    cursor: pointer;
+}
+
+/* Icon */
+
+#nav-icon3 {
+    width: 30px;
+    height: 25px;
+    position: absolute;
+    margin: 4px auto;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+#nav-icon3 span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+
+/* Icon 3 */
+
+#nav-icon3 span:nth-child(1) {
+    top: 0px;
+}
+
+#nav-icon3 span:nth-child(2), #nav-icon3 span:nth-child(3) {
+    top: 10px;
+}
+
+#nav-icon3 span:nth-child(4) {
+    top: 20px;
+}
+
+#nav-icon3.open span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+
+#nav-icon3.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#nav-icon3.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+#nav-icon3.open span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+
+.menu_content {
+    position: absolute;
+    width: 185px;
+    height: 100%;
+    background: #252525;
+    color: #FFFFFF;
+    margin: -1px;
+    z-index: 1;
+}
+
+.menu_content ul {
+    list-style: none;
+    height: 100%;
+    padding: 0;
+}
+
+.menu_content ul li {
+    height: 80px;
+    font-size: 20px;
+    font-family: "Myriad Pro", sans-serif;
+    padding-top: 25px;
+    font-weight: 200;
+    display: flex;
+    padding-left: 15px;
+}
+
+.menu_content ul li:hover {
+    background: #8a8a8a4d;
+}
+
+li svg {
+    margin: -4px 10px;
+}
+
+.menu svg:hover {
+    transform: scale(1.1);
+    transition: 150ms ease-out;
+    -webkit-transition: 150ms ease-out;
+    -moz-transition: 150ms ease-out;
+    -o-transition: 150ms ease-out;
+}
+
+.menu_content a, .menu_content a:hover {
+    color: #FFFFFF;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*** SOUS-MENU ****/
+.menu_content ul ul {
+    display: none;
+}
+
+.menu_content ul.menu_content > li:nth-child(2):hover {
+    margin-bottom: 145px;
+}
+
+.menu_content ul li:nth-child(3):hover {
+    margin-bottom: 150px;
+}
+
+.menu_content ul li:nth-child(2):hover ul, .menu_content ul li:nth-child(3):hover ul {
+    display: block;
+    position: absolute;
+    height: 145px;
+    margin-top: 55px;
+    background: #8a8a8a4d;
+    width: 100%;
+    left: 0;
+}
+
+.menu_content ul li:nth-child(3):hover ul {
+    height: 150px;
+}
+
+.menu_content ul ul li {
+    height: 50px;
+    padding: 13px;
+    padding-left: 16px;
+    font-size: 15px;
+}
+
+.sous-menu #Capa_1:first-child {
+    margin-left: 15px;
+}
+
+.sous-menu #Capa_2 {
+    margin-left: 11px;
+}
+
+.sticky {
+    position: fixed;
+    top: 70px;
+    width: 100%;
+    z-index: 2;
+}
+
+.stick {
+    position: fixed;
+    top: 70px;
+    z-index: 2;
+    margin-top: 50px;
+}
+
+
+#logofix {
+    display: none;
+}
+
+.logoStick {
+    display: block !important;
+    width: 50px;
+    position: fixed;
+    left: 210px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+.bulleInfo {
+    padding: 0 5px;
+    font-size: 10px;
+    line-height: 1.33;
+    border-radius: 20px;
+    border: #ccc5c5;
+    background: #ccc5c5;
+    color: #fff;
+    font-family: "Myriad Pro";
+}
+
+.bulleInfo:hover {
+    background: #00b3ee;
+}
+
+.bulleInfo span {
+    display: none;
+}
+
+.bulleInfo:hover span {
+    display: block;
+    position: absolute;
+    border-radius: 10px;
+    top: 3em;
+    left: 11em;
+    width: fit-content;
+    padding: 3px 10px;
+    border: 1px solid #0cf;
+    color: #000;
+    text-align: center;
+    font-family: "Myriad Pro";
+}
+
+/*** END MENU ***/
+
+/*********** MODALS *************/
+.close {
+    position: absolute;
+    right: 3px;
+    top: -5px;
+    font-size: 30px;
+    color: #009fdf;
+    opacity: 1;
+}
+
+.ent_mod .modal-dialog {
+    width: 1100px;
+    height: auto;
+}
+
+.ent_mod .modal-dialog .modal-content {
+    height: auto;
+    padding: 20px;
+}
+
+.ent_mod .searchMentor {
+    width: 532px;
+    margin: 5px;
+}
+
+#Chart {
+    height: 230px;
+}
+
+.down > div {
+    border: #00000030 1px solid;
+    margin: 0 5px;
+    width: 534px;
+
+}
+
+.nopad {
+    padding: 0;
+}
+
+.last {
+    color: #b3b3b3;
+    font-size: 15px;
+}
+
+.fc-center {
+    margin-bottom: 20px;
+}
+
+.calendarLegend {
+    text-align: center;
+    position: relative;
+    top: 60px;
+    display: block;
+}
+
+.calendarLegend img {
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+#vuesAmbass, #rdvAvecAmbass, #vuesMentorsAmb, #rdv {
+    padding: 0;
+}
+
+/************* END MODALS ****************/
+.bg_prof form[action="/update_background"] {
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+}
+
+.bg_prof form .form-group {
+    margin-bottom: 25px;
+}
+
+.bg_prof form .form-group img {
+    margin: auto;
+    display: grid;
+}
+
+.bg_prof form .form-group input {
+    display: none;
+}
+
+.chgeBg, .chgeLogo {
+    margin: auto;
+    display: block !important;
+    color: #ffffff;
+    background: #009fdf;
+    border: none;
+    font-weight: 400;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.form_logo_ent {
+    position: absolute;
+    width: 55px;
+    bottom: -120px;
+    left: 290px;
+    border: none;
+    border-radius: 0;
+    z-index: 9999;
+}
+
+.logo_ent {
+    width: 200px;
+    position: absolute;
+    bottom: -100px;
+    left: 145px;
+    border: #fff 2px;
+    z-index: 9999;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.tab_nav_profil .container {
+    width: 600px;
+}
+
+.block_identity {
+    height: 225px;
+    width: 800px;
+    margin: 65px 0 0 0;
+    display: flex;
+    float: left;
+}
+
+.block_identity .row {
+    width: 600px;
+}
+
+.block_identity li {
+    width: 200px;
+    list-style-type: none;
+    font-size: 17px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.block_identity li span, .block_identity li a {
+    color: #009fdf;
+    font-size: 13px;
+}
+
+.block_identity li:nth-child(odd) {
+    float: left;
+}
+
+.block_identity li:nth-child(even) {
+    float: right;
+}
+
+.tx_recommand {
+    height: 250px;
+    width: 260px;
+    text-align: center;
+}
+
+aside {
+    width: 320px;
+    border-left: 1px solid #0000003b;
+    text-align: center;
+    float: right;
+    margin-left: 20px;
+    height: auto;
+}
+
+aside > div:not(.aside_offer) {
+    margin-left: 20px;
+}
+
+aside h1 {
+    text-align: left;
+}
+
+.aside_offer p {
+    color: #000000;
+    font-size: 12px;
+}
+
+.aside_offer {
+    margin-left: 20px;
+}
+
+.aside_offer .row {
+    margin-bottom: 10px;
+}
+
+.aside_offer .col-md-12:not(.moreJobs) {
+    border: 1px solid #0000001f;
+    font-family: "Myriad Pro";
+}
+
+.aside_offer h4 {
+    color: #009fdf;
+    font-family: "Myriad Pro";
+
+}
+
+.aside_offer img {
+    height: 15px;
+    margin-left: 4px;
+}
+
+.presentation {
+    display: table;
+}
+
+#presentationText {
+    width: 800px;
+    word-wrap: break-word;
+}
+
+.editableArea > div:first-child, .editableArea > div:nth-child(2), .editableArea > div:nth-child(2) > div {
+    width: 100% !important;
+}
+
+#presentationTitre {
+    display: inline-block;
+}
+
+h1 {
+    color: #009fdf;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.mentors_choice, .pourquoi, .media_ent {
+    width: 800px !important;
+    float: left;
+}
+
+.mentors_choice .nom_prenom {
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #2b2b2b;
+}
+
+.mentors_choice .titre_mission, .mentors_choice .date {
+    font-size: 14px;
+}
+
+.pos_pers {
+    color: #666;
+    font-size: 14px;
+}
+
+.pourquoi {
+    margin-bottom: 15px;
+}
+
+.pourquoi span {
+    padding: 5px 12px;;
+}
+
+.btn_edit_inf, .btn_edit_inf:hover, .btn_edit_inf:focus {
+    margin-left: 0;
+}
+
+.mentors_choice {
+    margin-bottom: 30px;
+}
+
+.mentors_choice .row {
+    margin: auto;
+}
+
+.img_membre {
+    height: -moz-available; /* WebKit-based browsers will ignore this. */
+    height: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+    height: fill-available;
+    display: flex;
+}
+
+.padl-0 {
+    padding: 0;
+    display: flex;
+    font-size: 12px;
+}
+
+.bg_white_2.pad_0 {
+    height: 160px;
+    overflow: hidden;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    min-width: 390px;
+    max-width: 460px;
+    box-shadow: -3px 4px 7px 0 #c3c3c352;;
+    transition-property: transform;
+    transition: 50ms cubic-bezier(0.4, 0, 1, 1);
+}
+
+.bg_white_2.pad_0:hover .img_membre img {
+    transition-property: transform;
+    transition: 1s ease-out;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transform: translateY(-10px);
+}
+
+.media_ent {
+    display: table;
+}
+
+.gallery {
+    display: contents;
+}
+
+.media_ent .row {
+    margin-left: 0;
+}
+
+.media_ent .row .col-md-2 {
+    width: 220px;
+    padding: 0;
+    margin-right: 15px;
+}
+
+.media_ent .row .col-md-2 .item {
+    margin-bottom: 10px;
+    list-style: none;
+    position: absolute;
+    height: 223px;
+    width: 300px;
+    background-position: center;
+    background-size: cover;
+}
+
+.media_ent .row .col-md-2 li img {
+    height: -webkit-fill-available;
+    height: -moz-available;
+}
+
+.shadow {
+    width: 260px;
+    height: 220px;
+    float: left;
+    margin: 0 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+.shadow button, .shadowVideo button {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    background: transparent;
+    color: #45bbce;
+    border-radius: 50px;
+    border: none;
+}
+
+.shadow button:hover {
+    background: #919191;
+}
+
+.jobs {
+    height: 230px;
+    text-align: center;
+    border: 1px solid lightgrey;
+    margin: 50px;
+    box-shadow: 2px 2px lightgrey;
+    display: inline-table;
+    width: 100%;
+}
+
+.jobs h2 {
+    font-size: 27px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.jobs input {
+    background-color: #009fdf;
+    height: 45px;
+    width: 200px;
+    font-size: 20px;
+    font-family: "Myriad Pro", sans-serif;;
+    padding: 0 15px;
+    border-radius: 20px;
+    color: #fff !important;
+    border: none;
+    margin: auto;
+}
+
+/******************** JOBS *****************/
+.block_offer {
+    display: block;
+    width: 800px;
+    margin: 70px 0;
+    float: left;
+}
+
+.block_offer .row {
+    width: 100%;
+    border: 1px solid #0000003b;
+    height: 120px;
+    margin-bottom: 20px;
+    margin-left: 0;
+}
+
+.block_offer .row h3 {
+    color: #4f4f4f;
+    font-size: 20px;
+    margin: 25px 0 20px 15px
+}
+
+.block_offer .row p {
+    color: #bebebe;
+}
+
+.block_offer .row p img {
+    margin: 0 5px 0 15px;
+    width: 20px;
+}
+
+.avatarOffre:first-child {
+    margin-left: 40px;
+}
+
+.timeline-Footer {
+    display: none !important;
+}
+
+/**** PAGE DE L'OFFRE ****/
+.block_offer {
+    margin: 100px 0;
+    font-family: "Myriad Pro";
+}
+
+.block_offer h2, .block_offer h4 {
+    color: #009dfd;
+}
+
+.block_offer h2, .p_title {
+    text-align: center;
+}
+
+.p_title {
+    color: #bebebe;
+}
+
+.p_title img {
+    margin: 0 5px 0 15px;
+    width: 20px;
+}
+
+.postulerBtn {
+    background-color: #009fdf;
+    padding: 0 15px;
+    border-radius: 10px;
+    color: #fff !important;
+    border: 0;
+    line-height: 40px;
+    display: block;
+    margin: 30px auto;
+}
+
+/*************** IMAGES - VIDEOS ***************/
+.media_ent label input {
+    display: none;
+}
+
+.media_ent label {
+    background-color: #009fdf;
+    width: 200px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.media_ent .publier {
+    background-color: #009fdf;
+    width: 200px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 400;
+    line-height: 30px;
+    border: none;
+}
+
+.nbrMentorMobile {
+    display: none;
+}
+
+.shadowVideo {
+    width: 265px;
+    height: 220px;
+    float: left;
+    margin: 0 1px;
+    position: relative;
+    overflow: hidden;
+    background: black;
+    display: flex;
+}
+
+.shadowVideo > div {
+    margin: auto;
+    width: 100%;
+}
+
+#play-pause {
+    background: url("/assets/img/icons/play-button.png") no-repeat center;
+    left: 40%;
+    top: 40%;
+    height: 34px;
+    width: 34px;
+    position: absolute;
+    border: none;
+}
+
+.media_ent form:nth-child(2) {
+    margin-top: 20px;
+}
+
+/********** MODAL SUPRESSION OFFRE ***********/
+#deleteOffreModal .modal-dialog {
+    top: 200px;
+    height: 220px;
+}
+
+.deleteOffre {
+    height: 200px;
+    display: grid;
+    width: 500px;
+    margin: auto;
+}
+
+.deleteOffre .row {
+    margin: 20px auto;
+    text-align: center;
+    font-family: "Myriad Pro";
+}
+
+.deleteOffre input {
+    display: inline;
+    margin: 0 5px 0 20px;
+}
+
+.ask2 input {
+    display: inline;
+    margin: 0 5px 0 20px;
+    background-color: #ffffff;
+    border-radius: 30px;
+    width: 200px;
+    border: #009fdf 1px solid;
+    line-height: 30px;
+}
+
+.ask2 input:hover {
+    background-color: #009fdf;
+    color: #FFFFFF;
+}
+
+.deleteOffre .col-md-12 {
+    text-align: center;
+    color: #009fdf;
+}
+
+/********** MODAL visibilité ***********/
+#visiModal h2 {
+    text-align: center;
+    margin: 50px;
+    color: #3abee8;
+    font-family: "Myriad Pro";
+}
+
+#visiModal p {
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+#visiModal input, #ciblageModal input[type=submit] {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #3abee8;
+    padding: 5px 10px;
+    margin-top: 5px;
+}
+
+#visiModal form > input, #ciblageModal input[type=submit] {
+    background: #3abee8;
+    color: #FFFFFF;
+    width: 30vh;
+    margin: auto;
+}
+
+#visiModal form > input:hover, #ciblageModal input[type=submit]:hover {
+    background: #3bd5ff;
+    border: 1px solid #3bd5ff;
+}
+
+/************** MODAL CIBLAGE ****************/
+.pac-container {
+    z-index: 1051 !important;
+}
+
+#ciblageModal {
+    font-family: "Myriad Pro";
+}
+
+#ciblageModal h2 {
+    text-align: center;
+}
+
+#ciblageModal h3 {
+    margin: 50px 0 20px;
+}
+
+#ciblageModal p input {
+    display: none;
+}
+
+#ciblageModal > input {
+    background: #3bd5ff;
+    border: 1px solid #3bd5ff;
+}
+
+#ciblageModal input[type=checkbox] ~ .tag {
+    background: #FFFFFF;
+    color: #3abee8;
+    padding: 2px 15px;
+    border: #3abee8 1px solid;
+    border-radius: 20px;
+}
+
+#ciblageModal input[type=checkbox]:checked ~ .tag {
+    background: #3abee8;
+    color: #FFFFFF;
+    padding: 2px 15px;
+    border-radius: 20px;
+}
+
+#ciblageModal label {
+    font-weight: 200;
+}
+
+.section-map-list {
+    display: none;
+}
+
+#mapdiv {
+    height: 390px;
+    margin-bottom: 50px;
+}
+
+#mapguyane, #mapguadeloupe, #mapmarti, #mapreunion, #mapCaledonie {
+    height: 100px;
+    width: 150px;
+}
+
+#mapguyane .amcharts-zoom-control, #mapguadeloupe .amcharts-zoom-control, #mapmarti .amcharts-zoom-control, #mapreunion .amcharts-zoom-control, #mapCaledonie .amcharts-zoom-control {
+    display: none;
+}
+
+#mapdiv a, #mapguyane a, #mapguadeloupe a, #mapmarti a, #mapreunion a, #mapCaledonie a {
+    display: none !important;
+}
+
+#ciblageModal .row {
+    margin-bottom: 30px;
+}
+
+.franceEntiere {
+    z-index: 3;
+    position: absolute;
+    right: 150px;
+    margin-top: 150px;
+}
+
+.franceEntiere input {
+    display: none;
+}
+
+.franceEntiere .checkmark:hover {
+    background-color: #e8730e;
+}
+
+.franceEntiere .checkmark {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    border-radius: 2px;
+}
+
+.franceEntiere input[type=checkbox]:checked ~ .checkmark {
+    background-color: #e8730e;
+}
+
+/************** MODAL AMBASSADEURS ****************/
+#ambassModal {
+    font-family: "Myriad Pro";
+}
+
+.up > div {
+    border: 1px solid #00000030;
+    width: 262px;
+    height: 270px;
+    margin: 0 5px;
+}
+
+#visitTab .up > div, #candidatTab .up > div {
+    width: 350px;
+}
+
+.up {
+    margin-bottom: 30px;
+}
+
+.labelList {
+    text-align: center;
+    color: #b3b3b3;
+    font-weight: 600;
+}
+
+.labelList div:first-child {
+    width: 55px
+}
+
+.labelList div {
+    width: fit-content;
+}
+
+.rowMentor {
+    padding: 20px 15px;
+    display: flex;
+    font-weight: 600;
+    color: #00000087;
+    background: #FFFFFF;
+}
+
+.rowMentor div {
+    font-size: 12px;
+    margin: auto;
+    padding: 0;
+    text-align: center;
+}
+
+.rowMentor div:nth-child(2) {
+    text-align: center;
+}
+
+.rowMentor div:first-child {
+    padding: 0;
+}
+
+.searchMentor {
+    border: 1px solid #00000030;
+}
+
+.searchMentor hr {
+    border: #000000 1px solid;
+    margin: 5px auto;
+}
+
+.searchMentor input[type=text] {
+    border: #000000 1px solid;
+    margin: 30px auto;
+    border-radius: 15px;
+    padding-left: 10px;
+    width: 140px;
+}
+
+.searchMentor a {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+    color: #00000087;
+}
+
+.aNom {
+    color: #000 !important;
+}
+
+#mentor_dd {
+    list-style: none;
+    padding: 0;
+    min-height: 100px;
+}
+
+#mentor_dd input[type=button] {
+    margin: auto;
+    border: none;
+    color: green;
+    background: none;
+}
+
+.nbMentor div {
+    text-align: left;
+    font-size: 45px;
+    margin: 45px 15px;
+}
+
+.nbMentor div img {
+    float: right;
+}
+
+.nbAmbass {
+    text-align: center;
+    font-size: 50px;
+}
+
+.nbAmbass div:last-child p {
+    font-size: 17px;
+    margin: 20px;
+    color: #b3b3b3;
+}
+
+#ambassadeur_dd, #mentor_dd {
+    min-height: 100px;
+    height: auto;
+    background: url("/assets/img/bando.png") no-repeat center;
+    background-size: contain;
+    padding: 10px;
+}
+
+.dropper {
+    transition: all 200ms linear;
+    min-height: 100px;
+    padding: 20px;
+}
+
+.drop_hover {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8) inset;
+}
+
+.draggable {
+    list-style: none;
+}
+
+/*************** MODAL EDITION **************/
+.delete_compte {
+    color: #FFFFFF;
+    background: #e02525;
+    border: #e02525 1px solid;
+    border-radius: 20px;
+    padding: 10px 30px;
+}
+
+.delete_compte:hover {
+    background: #FFFFFF;
+    border: #e02525 1px solid;
+    color: #e02525;
+}
+
+.sendButtondetail {
+    background-color: #009fdf;
+    border-radius: 30px;
+    padding: 5px 45px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 400;
+    line-height: 30px;
+    border: #009fdf 1px solid;
+}
+
+.sendButtondetail:hover {
+    background: #FFFFFF;
+    border: #009fdf 1px solid;
+    color: #009fdf;
+}
+
+/*************** MODAL ATTRACTIVITE **************/
+.percep, .attrac {
+    height: 500px;
+}
+
+/************** MODAL MENTORS ******************/
+.nav-tabs {
+    border-bottom: none;
+}
+
+#stat_rdv {
+    width: auto;
+    position: absolute;
+    right: 420px;
+    z-index: 1;
+    border-radius: 10px;
+    line-height: 2;
+    margin-top: 5px;
+    border: solid 1px #ddd;
+}
+
+/*************** VIDEO ********************/
+.video:hover {
+    cursor: pointer;
+}
+
+/**************** CALENDAR *************/
+.calendaroverflow {
+    overflow: hidden;
+}
+
+/**************** MODAL EDITION WIDGET **********/
+.iframeModal .changeFrame {
+    margin: auto;
+}
+
+/****************** MEDIA QUERIES ***************/
+@media screen and (max-width: 812px) {
+    .head_pro {
+        min-height: 145px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .logo_ent {
+        width: 100px;
+        bottom: -80px;
+        right: 0;
+        left: unset;
+    }
+
+    .logoStick {
+        right: 20px;
+        left: unset;
+    }
+
+    .block_identity, .block_identity .row {
+        display: inline-table;
+        width: 100%;
+    }
+
+    .block_identity li {
+        width: 50%;
+    }
+
+    aside, .head_pro p, #TdReco-tools, .menu_content {
+        display: none;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    #presentationText, .mentors_choice, .media_ent, .block_offer {
+        width: 100%;
+    }
+
+    .bg_white_2.pad_0 {
+        min-width: 330px;
+        box-shadow: -3px 4px 7px 0 #c3c3c352;;
+    }
+
+    .shadow {
+        width: 97%;
+        height: 245px;
+    }
+
+    .jobs {
+        height: 200px;
+        margin: 5px;
+    }
+
+    .jobs h2 {
+        margin: 35px auto;
+        font-size: 20px;
+    }
+
+    .jobs input {
+        width: 190px;
+        font-size: 17px;
+    }
+
+    .avatarOffre {
+        display: none !important;
+    }
+
+    .nbrMentorMobile {
+        display: block;
+        color: #3abee8 !important;
+    }
+
+    .block_offer {
+        margin: 15px 0;
+    }
+
+    .block_offer .row h3 {
+        font-size: 17px;
+    }
+
+    .block_offer .row p {
+        font-size: 12px;
+    }
+
+    .block_offer .row p img {
+        margin: 0 5px 0 5px;
+    }
+
+    .shadow > div {
+        width: 100% !important;
+    }
+
+    .item {
+        width: 100% !important;
+    }
+}
+
+
